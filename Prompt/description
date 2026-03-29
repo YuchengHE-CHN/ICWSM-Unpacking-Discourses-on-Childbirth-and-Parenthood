@@ -1,0 +1,5 @@
+This is the declaration, intro and tranlation of the propmts
+
+## Prompts Declaration:
+
+The iteration process for updating our prompts in the sentiment analysis with Qwen Generative AI was driven by the need to enhace model's accuracy and reliability in interpreting social media comments about the fertility situation in China, Japan, and Korea. We started with a basic prompt and then gradually tweaked it based on outcomes of the earlier versions, focusing on aspects such as clarity, specificity, and the ability to capture emotional nuances. By critically assessing the performance of each prompt version, we aimed to identify and address more shortcomings, ultimately leading to the final version that provided the most precise sentiment scores different by vedio attitude and potential emotional words with contexts. This iterative refinement process not only improved the model's performance but also underscored the significance of prompt design in achieving reliable outcomes in sentiment analysis. 

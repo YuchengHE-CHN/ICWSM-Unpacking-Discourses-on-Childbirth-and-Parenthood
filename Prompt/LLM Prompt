@@ -1,0 +1,73 @@
+LLM Prompts 
+We provide two sets of prompts to QWen to label comments related to pro-reproduction videos and anti-reproduction videos. The first prompt is for videos that express supportive or positive views about childbirth and parenthood or report high-fertility events. The second prompt is for videos that convey negative views or suppressive attitudes toward reproduction and parenthood.
+Comments related to pro-reproduction videos
+Chinese prompt:
+``角色设定:你现在是一名文本情感分析打分专家。任务:你需要对这条短视频的评论进行分析，判断评论是否支持生育.分析要求:
+
+使用以下评分标准对这条短视频下的这个评论，进行评分.0表示反对生育; 1表示支持生育; 5表示中立.(必须且仅只能回复0 或者1 或者5 这样的整数)
+
+特殊情况: 如果评论中包含符号或表情，请根据视频标题，视频态度等上下文具体情况分析其情感分数.
+
+如果评论中出现``赞同''、``支持''、``羡慕''、``有道理''、``说的真对''、``明白''、``想生”''、``想要生一个娃''、``想结婚''、``自私自利'' 、``中药'' 等词汇，故应判断为支持生育，回答1.
+
+如果评论中出现``理解''、``尊重''、``无所谓''、``不关我事''、``个人选择''、``自己决定''等词汇，故应判断为中立，回答5.
+
+如果评论中出现``不结婚''、``不生''、``不敢生''、``没必要''、``不婚不育保平安''、``不嫁人''、``单身快乐''、``清醒''、``压力大''、``不需要''，故应判断为反对生育，回答 0.
+
+输出格式:仅输出“支持度分数为?''
+
+English translation:
+
+Role setting: You are now a text sentiment analysis scoring expert. Task: You need to analyze the comments on this short video to determine whether they support reproduction. 
+
+Analysis requirements:
+Use the following scoring criteria to score this comment under this short video. 0 means against reproduction; 1 means support for reproduction; 5 means neutral. (must and only respond with integers such as 0, 1, or 5)
+
+Special circumstances:
+If the comment contains symbols or emoticons, please analyze its sentiment score based on the context of the video title, attitude, etc.
+
+If the comment contains words or phrases such as ``agree'', ``support'', ``envy'', ``makes sense'', ``you're right'', ``understand'', ``want to have children'', ``want to have a baby'', ``want to get married'', ``selfish'', ``traditional Chinese medicine'', etc., it should be judged as supporting reproduction and answered 1.
+
+If the comments contain words or phrases such as ``understanding,'' ``respect,'' ``it doesn't matter,'' ``none of my business,'' ``personal choice,'' and ``my own decision,'' they should be judged as neutral and answered with 5.
+
+If the comment contains words or phrases such as ``not getting married'', ``not having children'', ``not daring to have children'', ``not necessary'', ``safe if you don't marry and have no children'', ``not getting married'', ``happy being single'', ``being sensible'', ``stressed out'', ``not needed'', it should be judged as opposing reproduction and answered 0.
+
+Output format: Only output “the score is?"
+
+Comments related to anti-reproduction videos
+Chinese prompt:
+``角色设定:你现在是一名文本情感分析打分专家。
+任务:你需要对这条短视频的评论进行分析，判断评论是否支持生育。
+
+分析要求:
+使用以下评分标准对这条短视频下的这个评论，进行评分: 0表示反对生育; 1表示支持生育；5表示中立. (必须且仅只能回复0 或者1 或者5 这样的整数).
+
+特殊情况: 
+如果评论中包含符号或表情，请根据视频标题，视频态度等上下文具体情况分析其情感分数.
+
+如果评论中出现``赞同''、``支持''、``羡慕''、``有道理''、``说的真对''、``明白''、``不结婚''、``不生''、``不敢生''、``没必要''、``不婚不育保平安''、``不嫁人''、``单身快乐'' ``清醒''、``压力大''、``不需要''等词汇, 故应判断为反对生育，回答0。
+
+如果评论中出现``理解''、``尊重''、``不关我事''、``无所谓''、``不关我事''、``个人选择''、``自己决定''、``这个社会，想结就结，不想结就不结''。任何一条路都有辛酸有幸福“ 等词汇，故应判断为中立，回答5.
+
+如果评论中出现``想生''、``想要生一个娃''、``想结婚''、``自私自利'' 、``中药''，故应判断为支持生育， 回答1.
+
+输出格式:仅输出“支持度分数为  ?''
+
+English translation:
+
+Characterization: You are now a text sentiment analysis scoring expert.
+Task: You need to analyze the comments on this short video to determine if the comments are pro-birth.
+
+Analysis Requirements.
+Rate this comment under this video using the following scale: 0 for anti-reproduction; 1 for pro-reproduction; 5 for neutral. (You must and can only reply with integers such as 0, 1, or 5).
+
+Special case. 
+If the comment contains symbols or emoticons, please analyze the sentiment score according to the context of the video title, the attitude of the video, and so on.
+
+If the comment contains words or phrases such as ``Approve'', ``Support'', ``Envy'', ``Reasonable'', ``Right'', ``Understand'', ``Not getting married'', ``Not having kids'', ``Don't dare to have kids'', ``No need to'', ``Not getting married, not having kids, not having kids, not marrying'', ``Happy to be single'' ``Sober'', ``Stressed'', ``Do not need'' etc, please analyze its sentiment score according to the video title, video attitude and other contexts. need'', etc., therefore, it should be judged to be against reproduction, answer 0.
+
+If there are words or phrases like ``Understand'', ``Respect'', ``It's none of my business'', ``It doesn't matter'', ``It's none of my business'', ``Personal choice'', ``Decide on your own'', and ``In this society, you can get married if you want to, or not if you don't want to'', in the comments, you should answer 0. There are sorrows and happiness in any path” and other words, so it should be judged as neutral, Answer 5.
+
+If words or phrases such as ``want to have a baby'', ``want to have a baby'', ``want to get married'', ``selfishness'', ``Chinese medicines'', etc. appear in the comments, the comment should be judged as pro-reproduction, Answer 1.
+
+Output format: Output only “the score is ?''
