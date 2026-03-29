@@ -6,9 +6,8 @@
 main: entry point of the application  
 Controller: handles API interactions  
 Service: contains detailed business logic  
-Data Folder: raw sample data, 10% translated sample data and description  
 Results Folder: analytical results including topic outcomes, 10% translated topic sample data and regression results  
 Reference Folder: standard of scoring the sentiment  
 Prompt Folder: introduction, declaration and the translation of the propmt
 
-
+Data are not included in this public repository. 
